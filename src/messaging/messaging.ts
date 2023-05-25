@@ -688,7 +688,7 @@ export class Messaging implements FirebaseServiceInterface {
         };
 
         return this.messagingRequestHandler.invokeRequestHandler(
-          FCM_TOPIC_MANAGEMENT_HOST, path, request,
+          `https://${FCM_TOPIC_MANAGEMENT_HOST}`, path, request,
         );
       })
       .then((response) => {
